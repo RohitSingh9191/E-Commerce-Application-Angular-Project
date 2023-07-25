@@ -1,0 +1,101 @@
+<div *ngIf="!showLogin">
+  <h1 class="text-color text-center mt-5"><b>User Sing-up</b></h1>
+  <div class="container">
+    <div class="card mt-5 card-style">
+      <div class="card-body">
+
+        <form #sellerSingUp="ngForm" (ngSubmit)="singUp(sellerSingUp.value)">
+
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Name</label>
+            <input type="text" required class="form-control" ngModel name="name" placeholder="Enter name"
+              id="exampleInputName" #nameInput="ngModel">
+              <div *ngIf="nameInput.invalid &&  nameInput.touched" class="error-message">
+                <span class="red">Please enter a valid name.</span>
+              </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" required ngModel name="email" class="form-control" placeholder="Enter email"
+              #emailInput="ngModel">
+            <div *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched)" class="error-message">
+              <span class="red">Please enter a valid email.</span>
+            </div>
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" required class="form-control" ngModel name="password" placeholder="Enter password"
+              #passwordInput="ngModel" id="exampleInputPassword1">
+            <div *ngIf="passwordInput.invalid &&  passwordInput.touched" class="error-message">
+              <span class="red">Please enter a valid password.</span>
+            </div>
+          </div>
+
+          <div class="mb-3 form-check">
+            <input type="checkbox" required class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          </div>
+
+          <div class="text-center">
+            <button type="submit" [disabled]="emailInput.invalid || passwordInput.invalid || nameInput.invalid" class="btn center btn-outline-success">Submit</button>
+          </div>
+        </form>
+        <div class="d-flex mt-3">
+          <h4>Alrady have an account? <a class="green" (click)="opneLogin()"> Click to login</a></h4>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ----------LogIn Aria------------- -->
+
+<div *ngIf="showLogin">
+  <h1 class="text-color text-center mt-5"><b>User Login</b></h1>
+  <div class="container">
+    <div class="card mt-5 card-style">
+      <div class="card-body">
+
+        <form #sellerLogIn="ngForm" (ngSubmit)="login(sellerLogIn.value)">
+          
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" required ngModel name="email" class="form-control" placeholder="Enter email"
+              #emailInput="ngModel">
+            <div *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched)" class="error-message">
+              <span class="red">Please enter a valid email.</span>
+            </div>
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" required class="form-control" ngModel name="password" placeholder="Enter password"
+              #passwordInput="ngModel" id="exampleInputPassword1">
+            <div *ngIf="passwordInput.invalid &&  passwordInput.touched" class="error-message">
+              <span class="red">Please enter a valid password.</span>
+            </div>
+          </div>
+
+          <div class="mb-3 form-check">
+            <input type="checkbox" required class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          </div>
+
+          <div class="text-center">
+            <button type="submit" [disabled]="emailInput.invalid || passwordInput.invalid "
+              class="btn center btn-outline-success">Login</button><br><br>
+            <h4 class="red">{{authError}}</h4>
+          </div>
+        </form>
+        <div class="d-flex mt-3">
+          <h4>Do not have an account? <a class="green" (click)="opneSingup()"> Click to Sing-Up</a></h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

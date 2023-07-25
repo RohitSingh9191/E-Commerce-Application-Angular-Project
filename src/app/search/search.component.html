@@ -1,0 +1,31 @@
+<div class="container mt-5">
+  <div *ngIf="productDetails">
+    <div class="card mb-3 card-style mb-4 card-hower" *ngFor="let item of productDetails">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <a routerLink="/product-details/{{item.id}}">
+            <img src="{{item.url}}" class="img-fluid rounded-start " alt="Product Image">
+          </a>
+        </div>
+        <div class="col-md-8 ">
+          <div class="card-body">
+            <a routerLink="/product-details/{{item.id}}">
+              <h2 class=""><b>{{item.name}}</b></h2>
+            </a>
+            
+            <span>Price - {{item.price}}</span><br><br>
+            <span>Color - {{item.color}}</span><br><br>
+            <span>Category - {{item.category}}</span><br><br>
+            <p class="card-text">Description - {{item.description}}</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div *ngIf="noDataPersent" class="footer-margin">
+      <h1 class="text-center red ">{{noDataPersent}}</h1>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,63 @@
+
+<div class="container mt-4">
+    <h1><b>Product Details</b></h1>
+    <div class="row mt-4">
+        <div class="col-sm-12 col-lg-6 mb-4">
+            <div class="container">
+                <div>
+                    <img class="img-size" src="{{productData?.url}}" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-lg-6 ">
+            <div class="container ms-2 ">
+                <div class="mt-3 ">
+                    <h1 class="name"><b>{{productData?.name}}</b></h1>
+                </div>
+                <div class="d-flex">
+                    <h1 class="text-col"><b>&#8377;{{productData?.price}}</b></h1>
+                    <h4 class="text-col mt-1">&nbsp;(per piece)</h4>
+                </div>
+
+
+                <div class="d-flex mt-1">
+                    <i class="fa-solid fa-star fa-xl" style="color: #ffdd33;"></i>
+                    <i class="fa-solid fa-star fa-xl" style="color: #ffdd33;"></i>
+                    <i class="fa-solid fa-star fa-xl" style="color: #ffdd33;"></i>
+                    <i class="fa-solid fa-star fa-xl" style="color: #d6d6d6;"></i>
+                    <i class="fa-solid fa-star fa-xl" style="color: #d6d6d6;"></i>
+                </div>
+                <div class="mt-4">
+                    <span class="text-size"><b>Color</b>
+                    </span><br>
+                    <span class="text-size">{{productData?.color}}</span><br>
+                </div>
+                <div class="mt-3">
+                    <span class="mtext-size"><b class="text-size">Category</b></span><br>
+                    <span class=""><span class="text-size">{{productData?.category}}</span></span>
+                </div>
+                <div class="mt-3">
+                    <span class="text-size"><b>Description</b></span>
+                    <p class="text-size">{{productData?.description}}</p>
+                </div>
+
+                <div class="mt-4">
+                    <span class="text-size"><b>Add Product</b></span><br>
+                </div>
+                <div class="btn-group mt-1" role="group" aria-label="Basic mixed styles example">    
+                    <button type="button" (click)="minus()" class="btn btn-success"><i class="fa-solid fa-minus fa-lg" style="color: #ffffff;"></i></button>
+                    <button type="button" class="btn btn-secondary">{{productQuantity}}</button>
+                    <button type="button" (click)="plush()" class="btn btn-success"><i class="fa-solid fa-plus fa-lg" style="color: #ffffff;"></i></button>
+                  </div>
+                <div class="row">
+                    <div class=" mt-3">
+                        <button *ngIf="!removeCart" (click)="addProduct()" routerLink="/cart-page" class="left">Buy</button>
+                        <button *ngIf="removeCart"  routerLink="/cart-page" class="left">Buy</button>
+                        <button *ngIf="!removeCart" (click)="addProduct()" class="right">Add to Cart</button>
+                        <button *ngIf="removeCart" (click)="removeTocart(productData?.id)" class="right">Remove to Cart</button>
+                    </div>
+                </div>
+            </div>   
+        </div>  
+    </div>
+</div>

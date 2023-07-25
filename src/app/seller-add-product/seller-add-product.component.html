@@ -1,0 +1,54 @@
+<h1 class="green h-size text-center mt-5"><b>Add Product Details</b></h1>
+<div class="container">
+  <div class="card mt-5 card-style">
+    <div class="card-body">
+                                     
+      <form #sellerAddProduct="ngForm" (ngSubmit)="submint(sellerAddProduct.value)" >
+        <div class="mb-4">
+          <!-- <label for="exampleInputPassword1" class="form-label">Name</label> -->
+          <input type="text" required class="form-control" ngModel name="name" placeholder="Enter Product name"
+            id="exampleInputName">
+        </div>
+
+        <div class="mb-4">
+          <input type="number" required class="form-control" ngModel name="price" id="exampleInputPrice"
+            placeholder="Enter Product Price" aria-describedby="emailHelp">
+        </div>
+
+        <div class="mb-4">
+            <input type="text" required class="form-control" ngModel name="color" id="exampleInputColor"
+              placeholder="Enter Product Color" >
+          </div>
+
+        <div class="mb-4">
+          <input type="text" required class="form-control" ngModel name="category" placeholder="Enter Product Category"
+            id="exampleInputCategory">
+        </div>
+
+        <div class="mb-4">
+            <textarea class="form-control" ngModel name="description" placeholder="Enter Product description" id="exampleInputDescription" rows="3"></textarea>
+            </div>
+
+            <div class="mb-4">
+                <input type="url" required class="form-control" ngModel name="url" placeholder="Enter Product Image Url"
+                  id="exampleInputUrl">
+              </div>
+        <div class="text-center">
+          <button type="submit" class="btn center" routerLink="seller-add-productl">Add Product</button>
+        </div>
+        <h4 class="green text-center mt-4">{{addPrductMesg}}</h4>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,39 @@
+<div class="container ">
+    <div>
+        <h2>Product List</h2>
+    </div>
+    <table class="table table-striped mt-3 ">
+        <thead >
+          <tr  >
+            <th class="table-head " scope="col">Id</th>
+            <th class="table-head" scope="col">Name</th>
+            <th class="table-head" scope="col">Price</th>
+            <th class="table-head" scope="col">Color</th>
+            <th class="table-head" scope="col">Category</th>
+            <th class="table-head" scope="col">Description</th>
+            <th class="table-head" scope="col">Image</th>
+            <th class="table-head" scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of productList">
+            <th scope="row">{{item.id}}</th>    
+            <td>{{item.name}}</td>
+            <td>{{item.price}}</td>
+            <td>{{item.color}}</td>
+            <td>{{item.category}}</td>
+            <td>{{item.description}}</td>
+            <td><img src="{{item.url}}" alt="Image"></td>
+            <td><button class="red"  (click)="deleteProduct(item.id)">Delete</button>
+              <i class="fa-solid fa-trash" (click)="deleteProduct(item.id)" style="color: #ff0000;"></i> 
+              
+              |<button class="green"  routerLink="/seller-update-product/{{item.id}}">Edit</button> 
+              <i class="fa-solid fa-pen-to-square" style="color: #097b17;"></i>  
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h4 class="red text-center">{{delletMsg}}</h4>
+      <div class="mb">
+    
+</div>

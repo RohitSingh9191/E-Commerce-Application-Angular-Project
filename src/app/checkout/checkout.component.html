@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="text-center mt-4">
+        <h1 class="text-color"><b>Check-Out</b></h1>
+    </div>
+    <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+            <div class="text-center">
+                <h1 class="heading">Add Shipping Address</h1>
+            <form class=" mt-4" #orderData="ngForm"  (ngSubmit)="oderNow(orderData.value)">
+                <input type="text"  name="email" placeholder="Enter your Email" ngModel #mailInput="ngModel"><br>
+                <input type="text"  name="address"  placeholder="Enter your Address" ngModel #adderssInput="ngModel"><br>
+                <input type="text" name="contact"  placeholder="Enter your Contact" ngModel #contactInput="ngModel"><br>
+                <button type="submit" [disabled]="mailInput.invalid && adderssInput.invalid && contactInput.invalid &&contactInput.touched">Order Now</button>
+            </form>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 mt-5">
+            <div class="text-center mt-5">
+                <h1>Total Amount: <b>&#8377;{{totalPrice}}</b></h1>
+                <h2>Payment Methods: <b>Pay on Delivery</b></h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex text-center msg-margin" *ngIf="orderMsg" >
+        <h3 class=" text-color me-2  "><b>{{orderMsg}}</b></h3>
+        <div class="spinner-border text-primary" role="status">
+            
+          </div>
+    </div>
+</div>

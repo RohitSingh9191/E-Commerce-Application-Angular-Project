@@ -1,0 +1,42 @@
+.img-size{
+    width: 550px;
+    height: 450px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.text-col{
+    color: rgb(73, 148, 123);
+}
+.text-size{
+    font-size:large;
+}
+.name{
+    font-size: xx-large;
+}
+.right{
+    position: relative;
+    float: right;
+    margin-right: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(230, 152, 56);
+    height: 45px;
+    font-weight: 600;
+    font-size: large;
+    width: 110px;
+    font-style: oblique;
+    color: firebrick ;
+}
+.left{
+    width: 60px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(230, 152, 56);
+    height: 45px;
+    font-weight: 600;
+    font-size: large;
+    font-style: oblique;
+    color: firebrick ;
+}
+

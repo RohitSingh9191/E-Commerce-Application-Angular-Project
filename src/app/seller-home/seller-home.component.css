@@ -1,0 +1,32 @@
+.table-head{
+    background-color: rgb(160, 241, 241);
+    
+}
+
+h2{
+    color: green;
+    margin-top: 20px;
+    font-size: xx-large;
+    font-style: italic;
+}
+table{
+    border: 4px;
+    border-left-color: blueviolet;
+    border-top-color: blueviolet;
+    border-bottom-color: blueviolet;
+    border-right-color: blueviolet;
+}
+img{
+    width: 100px;
+    height: 120px;
+}
+.red{
+    color: red;
+}
+button{
+    border: none;
+    background-color: none;
+}
+.green{
+    color: green;
+}

@@ -1,0 +1,22 @@
+  userSinghUp(data: singUp) {
+
+    this.http.post('http://localhost:3000/seller', 
+      data,
+      { observe: 'response' })
+      .subscribe((result) => {
+        this.isSellerLogedin.next(true);
+
+        this.router.navigate(['seller-home']);  
+        
+        console.warn('result', result)
+      });   
+    return false;
+  } 
+
+
+
+  http://localhost:3000/seller?name=Rohit%20Singh&password=rohit@123   
+
+ cd E-Commerce-Angular  
+
+  json-server --watch db.json

@@ -1,0 +1,47 @@
+.nav-styel{
+    background-color: rgb(41, 41, 41);
+   
+}
+.nav-text{
+    color: white;
+    font-size: medium;
+    font-weight: 500;
+    
+}
+
+.saerch{
+    border-radius: 5px;
+    border: none;
+    width: 300px;
+    background-color: rgb(215, 241, 241);
+    
+}
+.navbar-logo{
+    text-decoration: none;
+    font-size: x-large;
+    font-weight: 500;
+}
+
+.suggested-result{
+    position: absolute;
+    display: list-item ;
+    z-index: 10;
+    background-color: white;
+    width: 300px;
+    top: 46px;
+    /* border: 1px solid #ddd; */
+    list-style-type: none;
+    font-size: medium;
+}
+.suggested-result li{
+    /* border: 1px solid #fff; */
+    padding: 5px;
+    list-style-type: none;
+}
+.suggested-result li a{
+    cursor: pointer;
+    color: green
+}
+.search-margin{
+    margin-right: 140px;
+}

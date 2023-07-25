@@ -1,0 +1,25 @@
+.card-style{
+    width: 60%;
+    position: relative;
+    left: 21%;
+    background-color: rgb(169, 237, 241);
+}
+.center{
+   background-color: rgb(199, 202, 165);
+   width: 40%;
+   font-size: large;
+   font-weight: 500;
+   color: rgb(41, 163, 82);
+}
+
+.red{
+    color: red;
+}
+.green{
+     color: green;
+}
+
+.h-size{
+    font-size: xx-large;
+}
+

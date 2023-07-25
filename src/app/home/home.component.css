@@ -1,0 +1,48 @@
+.img-home{
+    width: 1280px;
+    height: 600px;
+}
+
+.black{
+    color: black;
+}
+.green{
+    color: green;
+}
+.card-img{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+.card {
+    width: 18%;
+    height: 400px;
+  }
+  
+
+.float-right{
+    position: relative;
+    float: right;
+}
+.card-style{
+    width: 16rem;
+    border-color: aquamarine;
+}
+.card-body{
+    background-color: aquamarine;
+   
+}
+a{
+    text-decoration: none;
+}
+h2{
+    z-index: 10;
+}
+
+.card-hower:hover {
+    transform: scale(1.1);
+}
+
+

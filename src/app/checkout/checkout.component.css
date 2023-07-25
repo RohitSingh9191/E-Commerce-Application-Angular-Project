@@ -1,0 +1,26 @@
+::placeholder {
+    color: blueviolet; /* Change the color to your desired color */
+    
+  }
+input{
+    margin-bottom: 25px;
+    height: auto;
+    border-color: blueviolet;
+    font-size: medium;
+    width: 250px;
+    height: 40px;
+}
+button{
+    border-color: blueviolet;
+    width: 250px;
+    height: 40px;
+    color: blueviolet;
+    margin-bottom: 50px;
+}
+.heading{
+    font-weight: 600;
+    color: rgb(46, 89, 124);
+}
+.msg-margin{
+    margin-left: 40%;
+}
