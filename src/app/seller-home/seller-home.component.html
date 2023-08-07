@@ -1,3 +1,8 @@
+
+<div>
+  <app-alert-box></app-alert-box>
+  <router-outlet></router-outlet>
+</div>
 <div class="container ">
     <div>
         <h2>Product List</h2>
@@ -24,8 +29,8 @@
             <td>{{item.category}}</td>
             <td>{{item.description}}</td>
             <td><img src="{{item.url}}" alt="Image"></td>
-            <td><button class="red"  (click)="deleteProduct(item.id)">Delete</button>
-              <i class="fa-solid fa-trash" (click)="deleteProduct(item.id)" style="color: #ff0000;"></i> 
+            <td><button class="red"  (click)="deletePopup(item.id)">Delete</button>
+              <i class="fa-solid fa-trash" (click)="deletePopup(item.id)" style="color: #ff0000;"></i> 
               
               |<button class="green"  routerLink="/seller-update-product/{{item.id}}">Edit</button> 
               <i class="fa-solid fa-pen-to-square" style="color: #097b17;"></i>  

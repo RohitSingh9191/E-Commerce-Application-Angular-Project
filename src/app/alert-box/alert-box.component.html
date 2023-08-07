@@ -1,0 +1,28 @@
+<!-- Button to Open the Modal -->
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h1 class="modal-title">{{popupBoxheader}}</h1>
+        <button type="button" class="btn-close" (click)="closePopup()"></button>
+      </div>
+      <!-- Modal body -->
+      <div class="modal-body">
+       <h3>
+        {{popupBoxmsg}}
+       </h3>
+      </div>
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" (click)="closePopup()">Cancle</button>
+        <button type="button" class="btn btn-danger" (click)="logout()"  >{{popupbutton}}</button>
+      </div>
+      
+
+    </div>
+  </div>
+</div>

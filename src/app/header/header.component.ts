@@ -4,6 +4,8 @@ import { ProductService } from '../services/product.service';
 import { product } from '../data-type';
 import { SearchComponent } from '../search/search.component';
 import { UserAuthComponent } from '../user-auth/user-auth.component';
+import { PopupboxService } from '../services/popupbox.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -17,25 +19,37 @@ export class HeaderComponent implements OnInit {
   searchName: any = ''
   userName: any = ''
   cartItemsNumber = 0
- 
-  constructor(private route: Router, private product: ProductService) { }
+  constructor(private route: Router, private product: ProductService, private popup: PopupboxService) {
+   
+ this.popup.userLogoutEvent().subscribe((result)=>{
+      if(result==true){
+        this.userlogout();
+      }
+    })
+ this.popup.sellerLogoutEvenr().subscribe((result)=>{
+  if(result==true){
+    this.logout();
+  }
+ })
+  
+  }
   ngOnInit(): void {
-    
+
     let cartItem = localStorage.getItem('localCart')
     if (cartItem) {
       this.cartItemsNumber = JSON.parse(cartItem).length
     }
-    this.product.cartData.subscribe((items)=>{
-      this.cartItemsNumber=items.length
+    this.product.cartData.subscribe((items) => {
+      this.cartItemsNumber = items.length
     })
 
     this.route.events.subscribe((val: any) => {
 
       if (localStorage.getItem('seller') && val && val.url && val.url.includes('seller')) {
         let sellerStore = localStorage.getItem('seller');
-        let sellerData = sellerStore ? JSON.parse(sellerStore):null
+        let sellerData = sellerStore ? JSON.parse(sellerStore) : null
         this.sellerName = sellerData.name;
-        if(val.url=='seller-home'||'seller-auth' ||'seller-add-product'){
+        if (val.url == 'seller-home' || 'seller-auth' || 'seller-add-product') {
           this.menuType = 'seller'
         }
       }
@@ -45,8 +59,8 @@ export class HeaderComponent implements OnInit {
           let sellerStore = localStorage.getItem('seller');
           let sellerData = sellerStore && JSON.parse(sellerStore)[0]
           this.sellerName = sellerData.name;
-          console.log("usrll==",val.url)
-          if(val.url=='/seller-home'||'/seller-auth' ||'/seller-add-product'){
+          console.log("usrll==", val.url)
+          if (val.url == '/seller-home' || '/seller-auth' || '/seller-add-product') {
             this.menuType = 'seller'
           }
         }
@@ -63,16 +77,25 @@ export class HeaderComponent implements OnInit {
       }
     });
   }
-  //seller logout
-  logout() {
-    localStorage.removeItem('seller')
-    this.route.navigate(['/'])
+  
+  userlogoutpopup(){
+    this.popup.openPopUp();
   }
   userlogout() {
     localStorage.removeItem('user');
     this.route.navigate(['user-auth']);
-    this.product.cartData.emit([]);
+     this.product.cartData.emit([]);
   }
+
+  sellerlogoutpopup(){
+    this.popup.sellerOpenPopUp();
+  }
+  logout() {
+    localStorage.removeItem('seller');
+    this.route.navigate(['/']);
+  }      
+
+ 
   searchProduct(word: KeyboardEvent) {
     if (word) {
       const element = word.target as HTMLInputElement;
@@ -98,5 +121,4 @@ export class HeaderComponent implements OnInit {
     //Set name in search box
     this.searchName = name
   }
-
 }

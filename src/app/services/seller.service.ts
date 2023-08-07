@@ -4,6 +4,7 @@ import { singUp } from '../data-type';
 import { login } from '../data-type';
 import { BehaviorSubject } from 'rxjs';
 import { Router } from '@angular/router';
+import { AlertBoxComponent } from '../alert-box/alert-box.component';
 @Injectable({
   providedIn: 'root'
 })
@@ -37,7 +38,7 @@ export class SellerService implements OnInit {
       }
       else{
         this.isLoginFail.emit(true)
-      }
+      } 
     });
   }
 

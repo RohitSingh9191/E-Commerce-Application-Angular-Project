@@ -66,8 +66,9 @@
             <a class="nav-link  nav-text" aria-current="page">{{sellerName | titlecase}}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-text" hrefjsno href="" (click)="logout()">Logout</a>
+            <a class="nav-link nav-text logout"  (click)="sellerlogoutpopup()">Logout</a>
           </li>
+       
         </ul>
 
         <!-- ----------User header------------ -->
@@ -83,7 +84,7 @@
             <a class="nav-link  nav-text" aria-current="page" href routerLink="cart-page">Cart({{cartItemsNumber}})</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-text" href (click)="userlogout()">Logout</a>
+            <a class="nav-link nav-text logout"   (click)="userlogoutpopup()">Logout</a>
           </li>
         </ul>
       </div>

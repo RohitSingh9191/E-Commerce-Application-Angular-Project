@@ -1,0 +1,42 @@
+.alert{
+    z-index: 40;
+    
+}   
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic);
+
+/* //----- Global */
+
+
+h2, h3 {
+  color:#6998d6 ;
+  font-weight: 400;
+  font-size: x-large;
+}
+h1{
+  color:#6998d6 ;
+  font-weight: 500;
+  font-size: xx-large;
+}
+
+.btn {
+  margin-top:15px;
+  padding:1.5% 5.5%;
+  display:inline-block;
+  height: 45px;
+  border-radius:3px;
+  border-color: #6998d6;
+  background:#6998d6;
+  font-size:22px;
+  font-weight: bold;
+  text-decoration:none;
+  text-transform:uppercase;
+  color:#fff;
+  border-radius: 20px;
+  
+  &:hover {
+    opacity:0.85;
+  }
+}
+

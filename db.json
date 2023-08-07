@@ -15,24 +15,6 @@
   ],
   "product": [
     {
-      "name": "Laptop",
-      "price": "60000",
-      "color": "black",
-      "category": "Electronic",
-      "description": "Lenovo laptop 8gb ram 500ssd ",
-      "url": "https://images.unsplash.com/photo-1618424181497-157f25b6ddd5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bGFwdG9wJTIwY29tcHV0ZXJ8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
-      "id": 1
-    },
-    {
-      "name": "Phone",
-      "price": "53000",
-      "color": "Blue",
-      "category": "Electronic",
-      "description": "iPhone 128gb",
-      "url": "https://images.unsplash.com/photo-1603791239531-1dda55e194a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YXBwbGUlMjBpcGhvbmV8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
-      "id": 2
-    },
-    {
       "name": "Smart Watch",
       "price": "3000",
       "color": "Silver",
@@ -164,43 +146,23 @@
       "id": 2
     }
   ],
-  "cart": [
+  "cart": [],
+  "orders": [
     {
-      "name": "Laptop",
-      "price": "60000",
-      "color": "black",
-      "category": "Electronic",
-      "description": "Lenovo laptop 8gb ram 500ssd ",
-      "url": "https://images.unsplash.com/photo-1618424181497-157f25b6ddd5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bGFwdG9wJTIwY29tcHV0ZXJ8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
-      "quantity": 1,
-      "productId": 1,
+      "email": "as",
+      "address": "zdn",
+      "contact": "asd",
+      "totalPrice": 103120,
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "email": "",
+      "address": "",
+      "contact": "",
+      "totalPrice": 61300,
       "userId": 1,
       "id": 2
-    },
-    {
-      "name": "LED Display",
-      "price": "41000",
-      "color": "Black",
-      "category": "Electronic",
-      "description": "Sumsung LED Display 24-inch-60-4-cm-ips-bezel-less-75-hz",
-      "url": "https://5.imimg.com/data5/SELLER/Default/2021/9/JZ/QM/LY/119909507/samsung-24-inch-60-4-cm-ips-bezel-less-75-hz-flat-flicker-free-led-monitor-500x500.jpg",
-      "quantity": 1,
-      "productId": 7,
-      "userId": 1,
-      "id": 3
-    },
-    {
-      "name": "Smart Watch",
-      "price": "3000",
-      "color": "Silver",
-      "category": "Electronic",
-      "description": "Fire-bolt rise smart watch",
-      "url": "https://www.parents.com/thmb/lbAe5r-0X6LrjdLQBxUhC-zWRfY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/best-smartwatches-for-kids-tout-858482f6463a4780be5ba918f51b9a19.jpg",
-      "quantity": 1,
-      "productId": 3,
-      "userId": 1,
-      "id": 4
     }
-  ],
-  "orders": []
+  ]
 }

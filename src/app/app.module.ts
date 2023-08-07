@@ -21,6 +21,7 @@ import { UserAuthComponent } from './user-auth/user-auth.component';
 import { CartPageComponent } from './cart-page/cart-page.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
+import { AlertBoxComponent } from './alert-box/alert-box.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { MyOrdersComponent } from './my-orders/my-orders.component';
     UserAuthComponent,
     CartPageComponent,
     CheckoutComponent,
-    MyOrdersComponent
+    MyOrdersComponent,
+    AlertBoxComponent
   ],
   imports: [
     BrowserModule,
@@ -51,4 +53,8 @@ import { MyOrdersComponent } from './my-orders/my-orders.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(){
+    
+  }
+ }

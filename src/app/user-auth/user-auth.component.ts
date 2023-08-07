@@ -21,12 +21,13 @@ export class UserAuthComponent implements OnInit {
   singUp(value: singUp) {
     this.user.singUp(value);
   }
+
   opneLogin() {
     this.showLogin = true
   }
   opneSingup() {
-    this.showLogin = false
-  }
+    this.showLogin = false  
+  } 
 
   login(value: login) {
     this.user.userLogin(value);
@@ -70,5 +71,6 @@ export class UserAuthComponent implements OnInit {
     setTimeout(() => {
       this.product.getCartList(userId)
     }, 2000);
+
   }
 }
