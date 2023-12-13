@@ -1,6 +1,6 @@
 */Commands to run this project/*
 
-*/command to run angular project/*
+/command to run angular project/
 step 1 -->npm install
 step 2 -->pm install -g @angular/cli
 step 3 -->ng serve -o
